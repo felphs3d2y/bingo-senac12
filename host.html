@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Host - Bingo Matemático</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Painel do Host</h1>
+
+  <div>
+    <button id="btn-sortear">Sortear Operação</button>
+  </div>
+
+  <h2 id="ultimo-numero">Nenhuma operação sorteada ainda...</h2>
+
+  <div id="numeros-sorteados">
+    <h3>Operações já sorteadas:</h3>
+    <div id="lista-sorteados"></div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
