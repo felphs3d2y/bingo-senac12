@@ -38,7 +38,7 @@ function createBingoCard() {
     square.classList.add("square");
 
     if (i === 12) { // centro LIVRE
-      square.textContent = "LIVRE";
+      square.textContent = "SENAC";
       square.classList.add("free", "selected");
     } else {
       const num = nums.shift();
@@ -134,3 +134,4 @@ if (btnSortear) {
     }
   });
 }
+
