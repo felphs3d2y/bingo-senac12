@@ -2,21 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Host - Bingo Matemático</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Painel do Host</h1>
+  <div class="container">
+    <img src="./senac-logo.png" alt="Logo do SENAC" class="logo-senac" />
 
-  <div>
-    <button id="btn-sortear">Sortear Operação</button>
-  </div>
+    <h1>Painel do Host</h1>
 
-  <h2 id="ultimo-numero">Nenhuma operação sorteada ainda...</h2>
+    <div>
+      <button id="btn-sortear">Sortear Operação</button>
+    </div>
 
-  <div id="numeros-sorteados">
-    <h3>Operações já sorteadas:</h3>
-    <div id="lista-sorteados"></div>
+    <h2 id="ultimo-numero">Nenhuma operação sorteada ainda...</h2>
+
+    <div id="numeros-sorteados">
+      <h3>Operações já sorteadas:</h3>
+      <div id="lista-sorteados"></div>
+    </div>
   </div>
 
   <!-- Firebase SDK -->
@@ -25,3 +30,4 @@
   <script src="index.js"></script>
 </body>
 </html>
+
