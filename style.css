@@ -1,47 +1,193 @@
-body {
-  font-family: Arial, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-image: url('./09.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 20px;
-  background: #f2f2f2;
+  margin: 20px;
+}
+
+.container {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo-senac {
+  width: 200px;
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 h1 {
-  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #003466;
+  margin-bottom: 10px;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
 }
 
 #operation {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #003466;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-weight: 600;
 }
 
-.bingo-card {
+#bingo-card {
   display: grid;
-  grid-template-columns: repeat(5, 60px);
-  grid-template-rows: repeat(5, 60px);
-  gap: 5px;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
 }
 
 .square {
-  background: white;
-  border: 2px solid #444;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #fafafa;
+  border: 2px solid #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 14px;
+  color: #003466;
+  border-radius: 8px;
   cursor: pointer;
-  user-select: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background 0.2s ease-in-out;
 }
 
-.square.free {
-  background: #4caf50;
+
+
+.square:hover {
+  background: #f0f0f0;
+}
+
+.selected {
+  background: #f7941d !important;
+  color: white;
+  border-color: #e67e00;
+  box-shadow: 0 3px 6px rgba(247, 148, 29, 0.4);
+}
+
+.free {
+  background: #003466 !important;
   color: white;
   cursor: default;
 }
 
-.square.selected {
-  background: #2196f3;
+#btn-sortear {
+  padding: 14px 28px;
+  font-size: 16px;
+  margin-top: 20px;
+  background: #003466;
+  border: none;
   color: white;
-  cursor: default;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
 }
+
+#btn-sortear:hover {
+  background: #f7941d;
+  transform: translateY(-2px);
+}
+
+#numeros-sorteados {
+  margin-top: 30px;
+  width: 100%;
+}
+
+#lista-sorteados {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+#ultimo-numero {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+}
+
+
+#lista-sorteados span {
+  background-color: #003466;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #operation {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+
+  .square {
+    font-size: 14px;
+  }
+
+  #btn-sortear {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  .container {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+
